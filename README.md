@@ -80,7 +80,7 @@ Configure the API to handle to the following routes:
 | GET    | /api/posts              | Returns an array of all the post objects contained in the database.                                                                                                         | -->
 <!-- | GET    | /api/posts/:id          | Returns the post object with the specified id.                                                                                                                              | -->
 <!-- | GET    | /api/posts/:id/comments | Returns an array of all the comment objects associated with the post with the specified id.                                                                                 | -->
-| DELETE | /api/posts/:id          | Removes the post with the specified id and returns the **deleted post object**. You may need to make additional calls to the database in order to satisfy this requirement. |
+<!-- | DELETE | /api/posts/:id          | Removes the post with the specified id and returns the **deleted post object**. You may need to make additional calls to the database in order to satisfy this requirement. | -->
 | PUT    | /api/posts/:id          | Updates the post with the specified `id` using data from the `request body`. Returns the modified document, **NOT the original**.                                           |
 
 #### Endpoint Specifications
@@ -159,7 +159,7 @@ When the client makes a `GET` request to `/api/posts`:
   - respond with HTTP status code `500`.
   - return the following JSON object: `{ error: "The comments information could not be retrieved." }`. -->
 
-When the client makes a `DELETE` request to `/api/posts/:id`:
+<!-- When the client makes a `DELETE` request to `/api/posts/:id`:
 
 - If the _post_ with the specified `id` is not found:
 
@@ -169,7 +169,7 @@ When the client makes a `DELETE` request to `/api/posts/:id`:
 - If there's an error in removing the _post_ from the database:
   - cancel the request.
   - respond with HTTP status code `500`.
-  - return the following JSON object: `{ error: "The post could not be removed" }`.
+  - return the following JSON object: `{ error: "The post could not be removed" }`. -->
 
 When the client makes a `PUT` request to `/api/posts/:id`:
 
